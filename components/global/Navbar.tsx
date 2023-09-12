@@ -117,12 +117,13 @@ const Navbar = () => {
                     </Popover.Group>
 
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <button
-                        onClick={() => {
-                        setClickedGoogle(true);
-                        signIn("google");
-                        }}
-                    >Sign In With Google</button>
+                        <button
+                            onClick={() => {
+                                setClickedGoogle(true);
+                                signIn("google");
+                            }}>
+                                Sign In With Google
+                        </button>
                     </div>
                 </nav>
                 
