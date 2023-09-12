@@ -31,9 +31,12 @@ function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ')
 }
 
-const Navbar = () => {
+import { useSession, signIn, signOut } from "next-auth/react"
 
+const Navbar = () => {
+    const { data: session } = useSession()
     const [ mobileMenuOpen, setMobileMenuOpen ] = useState(false)
+    const [ clickedGoogle, setClickedGoogle ] = useState(false);
 
     return (
         <header className="">
@@ -114,11 +117,15 @@ const Navbar = () => {
                     </Popover.Group>
 
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                            Log in <span aria-hidden="true">&rarr;</span>
-                        </a>
+                    <button
+                        onClick={() => {
+                        setClickedGoogle(true);
+                        signIn("google");
+                        }}
+                    >Sign In With Google</button>
                     </div>
                 </nav>
+                
                 <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                     <div className="fixed inset-0 z-10" />
                     <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -182,12 +189,11 @@ const Navbar = () => {
                                     </a>
                                 </div>
                                 <div className="py-6">
-                                    <a
-                                        href="#"
+                                    <button onClick={() => signIn()}
                                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     >
-                                        Log in
-                                    </a>
+                                        Log in {session ? "SESSION" : "NAH"}
+                                    </button>
                                 </div>
                             </div>
                         </div>
