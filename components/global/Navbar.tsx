@@ -122,7 +122,7 @@ const Navbar = () => {
                                 setClickedGoogle(true);
                                 signIn("google");
                             }}>
-                                Sign In With Google
+                                Sign In With Google {session && "SESSION YAY FUCK YOU"}
                         </button>
                     </div>
                 </nav>
