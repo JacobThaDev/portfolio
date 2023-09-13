@@ -22,15 +22,15 @@ function Login() {
                     <div className="w-[100%] max-w-[450px] p-3 border-1 rounded-2xl shadow-xl bg-white">
                         <div className="flex login-header items-center justify-center flex-col py-5 gap-1">
                             <Logo width={50} className="text-primary mb-5"/>
-                            <h3 className="text-xl font-semibold">Welcome to CodeCanvas</h3>
+                            <h3 className="text-xl font-semibold">Welcome to Foxtrot Labs</h3>
                             <p>Thanks for joining!</p>
                         </div>
 
                         <div className="flex flex-col items-center justify-center mb-10">
                             {session.user && 
                                 <img src={""+session.user.image} 
-                                        className="rounded-full border-[10px] w-32 h-32 border-gray-100" 
-                                        alt=""/>}
+                                    className="rounded-full border-[10px] w-32 h-32 border-gray-100" 
+                                    alt=""/>}
 
                             <p className="font-[700] text-xl mt-3">{session.user && session.user.name}</p>
                             <p className="text-gray-600">{session.user && session.user.email}</p>
@@ -68,7 +68,6 @@ function Login() {
                             </button>
                         </div>
                     </div>}
-
                 </div>
 
             </Container>

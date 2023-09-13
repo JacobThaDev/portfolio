@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Container from "../global/Container";
 import { Logo } from "../icons/Logo";
+import Link from "next/link";
 
 const HomeHeader = () => {
 
@@ -14,7 +15,7 @@ const HomeHeader = () => {
                     <div>
                         <div className="flex items-center gap-3 mb-8">
                             <p className="text-xl mb-0 text-primary font-[700]">
-                                Welcome to CodeCanvas
+                                Welcome to Foxtrot Labs
                             </p>
                         </div>
 
@@ -29,12 +30,12 @@ const HomeHeader = () => {
                         </p>
 
                         <div className="flex gap-3">
-                            <a href="/signup" className="inline-block bg-primary px-3.5 py-2.5 rounded-lg text-white">
+                            <Link href="/signup" className="inline-block bg-primary px-3.5 py-2.5 rounded-lg text-white">
                                 Get Started
-                            </a>
-                            <a href="/signup" className="inline-block px-3.5 py-2.5 rounded-lg bg-[#EFEFEF] hover:bg-primary hover:text-white transition-colors">
-                                Become a Creator
-                            </a>
+                            </Link>
+                            <Link href="/signup" className="inline-block px-3.5 py-2.5 rounded-lg bg-[#EFEFEF] hover:bg-primary hover:text-white transition-colors">
+                                Contact Us
+                            </Link>
                         </div>
                     </div>
                 </div>
