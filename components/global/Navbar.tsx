@@ -31,14 +31,10 @@ function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ')
 }
 
-import { 
-    useSession, signIn, signOut 
-} from "next-auth/react"
 import Link from "next/link";
 
 const Navbar = () => {
 
-    const { data: session } = useSession()
     const [ mobileMenuOpen, setMobileMenuOpen ] = useState(false)
 
     return (

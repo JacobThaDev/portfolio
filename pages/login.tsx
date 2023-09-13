@@ -2,11 +2,8 @@ import React from 'react';
 import GlobalLayout from '../layouts/GlobalLayout';
 import Container from '../components/global/Container';
 import { Logo } from '../components/icons/Logo';
-import { useSession, signIn, signOut } from "next-auth/react"
 
 function Login() {
-    const { data: session } = useSession()
-    console.log(session);
     
     return(
         <GlobalLayout title="Log In" showNav={false}>
@@ -58,13 +55,11 @@ function Login() {
                         </div>
 
                         <div className="px-8 pb-10">
-                            <button className="w-full mb-3 inline-block px-3.5 py-2.5 rounded-lg bg-[#EFEFEF] hover:bg-primary hover:text-white transition-colors" 
-                                onClick={() => signIn("google")}>
+                            <button className="w-full mb-3 inline-block px-3.5 py-2.5 rounded-lg bg-[#EFEFEF] hover:bg-primary hover:text-white transition-colors">
                                 Log in with Google
                             </button>
-                            <button className="w-full inline-block px-3.5 py-2.5 rounded-lg bg-[#EFEFEF] hover:bg-primary hover:text-white transition-colors" 
-                                onClick={() => signIn("twitter")}>
-                                Log in with Twitter
+                            <button className="w-full inline-block px-3.5 py-2.5 rounded-lg bg-[#EFEFEF] hover:bg-primary hover:text-white transition-colors" >
+                                Log in with Github
                             </button>
                         </div>
                     </div>}
