@@ -30,10 +30,10 @@ const HomeHeader = () => {
                         </p>
 
                         <div className="flex gap-3">
-                            <Link href="/signup" className="inline-block bg-primary px-3.5 py-2.5 rounded-lg text-white">
+                            <Link href="/login" className="inline-block bg-primary px-3.5 py-2.5 rounded-lg text-white">
                                 Get Started
                             </Link>
-                            <Link href="/signup" className="inline-block px-3.5 py-2.5 rounded-lg bg-[#EFEFEF] hover:bg-primary hover:text-white transition-colors">
+                            <Link href="/contact" className="inline-block px-3.5 py-2.5 rounded-lg bg-[#EFEFEF] hover:bg-primary hover:text-white transition-colors">
                                 Contact Us
                             </Link>
                         </div>
