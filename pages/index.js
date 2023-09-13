@@ -1,4 +1,4 @@
-import GlobalLayout from '@/layouts/GlobalLayout.tsx';
+import GlobalLayout from '@/layouts/GlobalLayout';
 import HomeHeader from '@/components/home/HomeHeader';
 
 function Homepage() {

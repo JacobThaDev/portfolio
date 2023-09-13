@@ -5,7 +5,7 @@ import { Logo } from "../icons/Logo";
 const HomeHeader = () => {
 
     return (
-        <div className="relative overflow-hidden pt-32 pb-24">
+        <div className="relative overflow-hidden pt-40 pb-32">
             <div className="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl md:-mr-20 lg:-mr-36"
                 aria-hidden="true" />
 

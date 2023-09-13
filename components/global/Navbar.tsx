@@ -36,10 +36,9 @@ import { useSession, signIn, signOut } from "next-auth/react"
 const Navbar = () => {
     const { data: session } = useSession()
     const [ mobileMenuOpen, setMobileMenuOpen ] = useState(false)
-    const [ clickedGoogle, setClickedGoogle ] = useState(false);
 
     return (
-        <header className="">
+        <header className={`absolute w-full top-0 left-0 z-50 ${mobileMenuOpen && "bg-white"}`}>
             <Container>
                 <nav className="mx-auto flex items-center justify-between py-6" aria-label="Global">
                     <div className="flex lg:flex-1">
@@ -92,15 +91,7 @@ const Navbar = () => {
                                             </div>
                                         ))}
                                     </div>
-                                    <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                                        {callsToAction.map((item) => (
-                                            <a key={item.name} href={item.href}
-                                                className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
-                                                <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
-                                        ))}
-                                    </div>
+                                    
                                 </Popover.Panel>
                             </Transition>
                         </Popover>
@@ -117,19 +108,17 @@ const Navbar = () => {
                     </Popover.Group>
 
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <button
-                            onClick={() => {
-                                setClickedGoogle(true);
-                                signIn("google");
-                            }}>
-                                Sign In With Google {session && "SESSION YAY FUCK YOU"}
-                        </button>
+                        <a href="/login" className="text-sm font-semibold leading-6 text-gray-900">
+                            Log in <span aria-hidden="true">&rarr;</span>
+                        </a>
                     </div>
                 </nav>
-                
+
+
+
                 <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                     <div className="fixed inset-0 z-10" />
-                    <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <Dialog.Panel className="fixed inset-y-0 z-50 right-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Code Canvas</span>
@@ -170,31 +159,24 @@ const Navbar = () => {
                                             </>
                                         )}
                                     </Disclosure>
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >
+                                    <a href="#"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                         Features
                                     </a>
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >
+                                    <a href="#"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                         Marketplace
                                     </a>
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >
+                                    <a href="#"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                         Company
                                     </a>
                                 </div>
                                 <div className="py-6">
-                                    <button onClick={() => signIn()}
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >
-                                        Log in {session ? "SESSION" : "NAH"}
-                                    </button>
+                                    <a href="/login"
+                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                        Log in
+                                    </a>
                                 </div>
                             </div>
                         </div>

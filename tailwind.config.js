@@ -10,9 +10,14 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
+      background: "#FAFAFA",
       primary: "#D5412E",
       white: "#FFFFFF",
-      black: "#000000"
+      black: "#000000",
+      danger: "#d2433f",
+      secondary: "#9750DD",
+      warning: "#f0ad4e",
+      success: "#62af66",
     },
     container: {
       center: true,

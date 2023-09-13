@@ -5,15 +5,17 @@ import Navbar from "../components/global/Navbar";
 interface LayoutProps {
     children: React.ReactNode;
 	title?:string;
-	desc?:string
+	desc?:string;
+	showNav?:boolean;
+	showFooter?:boolean
 }
 
-export default function GlobalLayout({ children, title, desc, }: LayoutProps) {
+export default function GlobalLayout({ children, title, desc, showNav = true, showFooter = true }: LayoutProps) {
 
 	return (
 		<>
 			<MetaData title={title} desc={desc}/>
-			<Navbar/>
+			{showNav && <Navbar/>}
 			{children}
 		</>
 	);
