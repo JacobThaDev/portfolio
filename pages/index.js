@@ -3,11 +3,11 @@ import HomeHeader from '@/components/home/HomeHeader';
 
 function Homepage() {
 
-    return(
+    return (
         <GlobalLayout title="Home">
             <HomeHeader/>
         </GlobalLayout>
-    )
+    );
 
 }
 

@@ -15,6 +15,8 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import Container from "./Container";
 import { Logo } from "../icons/Logo";
 
+import { censorEmail, capitalize } from "../../helpers/Functions";
+
 const products = [
     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
     { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
@@ -32,9 +34,11 @@ function classNames(...classes: any) {
 }
 
 import Link from "next/link";
+import { useSession, signOut } from "next-auth/react"
 
 const Navbar = () => {
 
+    const { data:session } = useSession()
     const [ mobileMenuOpen, setMobileMenuOpen ] = useState(false)
 
     return (
@@ -108,9 +112,74 @@ const Navbar = () => {
                     </Popover.Group>
 
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <Link href="/login" className="text-sm font-semibold leading-6 text-gray-900">
+                        {session && <>
+                            <Popover.Group className="hidden lg:flex lg:gap-x-12">
+                                <Popover className="relative">
+                            
+                                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none">
+                                    <div className="flex items-center gap-3 text-left">
+                                        <div>
+                                            <img src={""+(session.user && session.user.image)} 
+                                                width={40}
+                                                height={40}
+                                                alt="" className="rounded-full"/>
+                                        </div>
+                                        <div>
+                                            <p className="text-md leading-3 mb-1">
+                                                {session.user && session.user.name}
+                                            </p>
+                                            <p className="text-gray-500 font-[400] leading-3">
+                                                {session.user 
+                                                    && session.user.email 
+                                                    && censorEmail(session.user.email)}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    </Popover.Button>
+
+                                    <Transition
+                                        as={Fragment}
+                                        enter="transition ease-out duration-200"
+                                        enterFrom="opacity-0 translate-y-1"
+                                        enterTo="opacity-100 translate-y-0"
+                                        leave="transition ease-in duration-150"
+                                        leaveFrom="opacity-100 translate-y-0"
+                                        leaveTo="opacity-0 translate-y-1"
+                                    >
+                                        <Popover.Panel className="absolute -right-0 top-full z-10 mt-3 w-screen max-w-[200px] overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                                            <div className="p-4">
+                                                <p className="text-gray-500 text-sm text-center">
+                                                    Signed in with <br/>{capitalize(session.provider)}
+                                                </p>
+                                                <div className="group relative flex items-center gap-x-4 rounded-lg p-3 text-sm leading-6 hover:bg-gray-50">
+                                                    <Link href={"/user/profile"} className="block font-semibold">
+                                                        Profile
+                                                    </Link>
+                                                </div>
+                                                <div className="group relative flex items-center gap-x-4 rounded-lg p-3 text-sm leading-6 hover:bg-gray-50">
+                                                    <Link href={"/user/profile/downloads"} className="block font-semibold">
+                                                        My Downloads
+                                                    </Link>
+                                                </div>
+                                                <div className="group relative flex items-center gap-x-4 rounded-lg p-3 text-sm leading-6 hover:bg-gray-50">
+                                                    <Link href={"/user/profile/settings"} className="block font-semibold">
+                                                        Settings
+                                                    </Link>
+                                                </div>
+                                                <div className="group relative flex items-center gap-x-4 rounded-lg p-3 text-sm leading-6 hover:bg-gray-50">
+                                                    <button onClick={() => signOut()} className="block font-semibold text-danger">
+                                                        Log Out
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </Popover.Panel>
+                                    </Transition>
+                                </Popover>
+                            </Popover.Group>
+                        </>}
+                        {!session && <Link href="/login" className="text-sm font-semibold leading-6 text-gray-900">
                             Log in <span aria-hidden="true">&rarr;</span>
-                        </Link>
+                        </Link>}
                     </div>
                 </nav>
 
