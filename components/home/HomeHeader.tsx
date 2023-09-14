@@ -6,12 +6,12 @@ import Link from "next/link";
 const HomeHeader = () => {
 
     return (
-        <div className="relative overflow-hidden pt-40 pb-32">
-            <div className="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl md:-mr-20 lg:-mr-36"
+        <div className="relative overflow-hidden pt-40 pb-32 bg-background z-1 home-header">
+            <div className="absolute inset-y-0 right-1/2 -mr-10 w-[200%] z-2 skew-x-[-30deg] bg-white shadow-xl md:-mr-20 lg:-mr-36"
                 aria-hidden="true" />
 
-            <Container>
-                <div className="flex max-w-[900px] items-center">
+            <Container className="relative z-3">
+                <div className="flex max-w-[900px] items-center z-3">
                     <div>
                         <div className="flex items-center gap-3 mb-8">
                             <p className="text-xl mb-0 text-primary font-[700]">
@@ -24,9 +24,9 @@ const HomeHeader = () => {
                         </p>
 
                         <p className="text-lg mb-8">
-                            Get access to hundreds of beautiful website templates, components, and more with 
-                            our online library. Get started today for free, or pick up our premium plan for exclusive
-                            all-access.
+                            Get free beautiful website templates, components, and more with 
+                            our online library. Get started for free, or pick up our premium plan for exclusive
+                            all-access to premium content.
                         </p>
 
                         <div className="flex gap-3">

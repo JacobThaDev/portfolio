@@ -36,13 +36,13 @@
     height: fit-content;
     z-index: 3;
     max-width: 640px;
-    background-image: radial-gradient(at 27% 37%,#3a8bfd 0,transparent 0),
-                    radial-gradient(at 97% 21%,#72fe7d 0,transparent 50%),
-                    radial-gradient(at 52% 99%,#fd3a4e 0,transparent 50%),
-                    radial-gradient(at 10% 29%,#855afc 0,transparent 50%),
-                    radial-gradient(at 97% 96%,#e4c795 0,transparent 50%),
-                    radial-gradient(at 33% 50%,#8ca8e8 0,transparent 50%),
-                    radial-gradient(at 79% 53%,#eea5ba 0,transparent 50%);
+    background-image:radial-gradient(at 27% 37%,#3a8bfd 0,transparent 0),
+                     radial-gradient(at 97% 21%,#72fe7d 0,transparent 50%),
+                     radial-gradient(at 52% 99%,#fd3a4e 0,transparent 50%),
+                     radial-gradient(at 10% 29%,#855afc 0,transparent 50%),
+                     radial-gradient(at 97% 96%,#e4c795 0,transparent 50%),
+                     radial-gradient(at 33% 50%,#8ca8e8 0,transparent 50%),
+                     radial-gradient(at 79% 53%,#eea5ba 0,transparent 50%);
     position: absolute;
     content: "";
     width: 100%;
@@ -50,4 +50,10 @@
     filter: blur(100px) saturate(150%);
     top: 80px;
     opacity: .15;
+}
+
+.home-header {
+    /*background: url(https://media.istockphoto.com/id/1047259374/photo/programming-source-code-abstract-background.jpg?b=1&s=612x612&w=0&k=20&c=ujRPoiaJlm5U3WDWcVVa1YVlFIt6Gcjr-RstzOEPbIU=)
+        center right no-repeat;
+    background-size: cover;*/
 }

@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
-      background: "#FAFAFA",
+      background: "#f5f5f5",
       primary: "#D5412E",
       white: "#FFFFFF",
       black: "#000000",
