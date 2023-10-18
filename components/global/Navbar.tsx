@@ -26,6 +26,7 @@ const products = [
     { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
     { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
 ]
+
 const callsToAction = [
     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
     { name: 'Contact sales', href: '#', icon: PhoneIcon },
@@ -50,7 +51,8 @@ const Navbar = () => {
                     <div className="flex lg:flex-1">
                         <Link href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Foxtrot Labs</span>
-                            <Logo className="text-primary" width={40}/>
+                            <img src="https://www.credoconstruction.com/wp-content/uploads/2020/02/3-300x99.jpg" 
+                            style={{ height: 40 }}/>
                         </Link>
                     </div>
                     <div className="flex lg:hidden">
@@ -118,7 +120,7 @@ const Navbar = () => {
                             <Popover.Group className="hidden lg:flex lg:gap-x-12">
                                 <Popover className="relative">
                             
-                                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none">
+                                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus-visible:outline-none">
                                     <div className="flex items-center gap-3 text-left">
                                         <div>
                                             <img src={""+(session.user && session.user.image)} 
@@ -130,7 +132,7 @@ const Navbar = () => {
                                             <p className="text-md leading-3 mb-1">
                                                 {session.user && session.user.name}
                                             </p>
-                                            <p className="text-gray-500 font-[400] leading-3">
+                                            <p className="text-gray-300 font-[400] leading-3">
                                                 {session.user 
                                                     && session.user.email 
                                                     && censorEmail(session.user.email)}
@@ -179,7 +181,7 @@ const Navbar = () => {
                                 </Popover>
                             </Popover.Group>
                         </>}
-                        {!session && <Link href="/login" className="text-sm font-semibold leading-6 text-gray-900">
+                        {!session && <Link href="/login" className="text-sm font-semibold leading-6 text-white">
                             Log in <span aria-hidden="true">&rarr;</span>
                         </Link>}
                     </div>

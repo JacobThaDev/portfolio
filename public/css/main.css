@@ -53,7 +53,13 @@
 }
 
 .home-header {
-    /*background: url(https://media.istockphoto.com/id/1047259374/photo/programming-source-code-abstract-background.jpg?b=1&s=612x612&w=0&k=20&c=ujRPoiaJlm5U3WDWcVVa1YVlFIt6Gcjr-RstzOEPbIU=)
-        center right no-repeat;
-    background-size: cover;*/
+    background: white;
+}
+
+@media screen(lg) {
+    .home-header {
+        background: url(../img/header.png) center right no-repeat;
+        background-size: cover;
+        border-bottom: solid 1px #EAEAEA;
+    }
 }
