@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face { 
+    font-family: "PlusJakartaSans"; 
+    src: url('../fonts/PlusJakartaSans.ttf'); 
+    font-display: fallback; /* Define how the browser behaves during download */ 
+}
+
+body {
+    font-family: "PlusJakartaSans" !important;
+}

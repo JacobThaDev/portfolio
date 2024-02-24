@@ -10,8 +10,8 @@ import {
 
 import Container from "./Container";
 import Link from "next/link";
-import { useSession } from "next-auth/react"
 import Image from "next/image";
+import { Logo } from "../icons/Logo";
 
 const Navbar = () => {
 
@@ -20,15 +20,15 @@ const Navbar = () => {
     return (
         <header className={`absolute w-full top-0 left-0 z-50 bg-white shadow-md`}>
             <Container>
-                <nav className="mx-auto flex items-center py-6" aria-label="Global">
-                    <div className="flex lg:flex-1 gap-5 items-center">
-                        <Link href="#">
+                <nav className="mx-auto flex items-center py-6 gap-10" aria-label="Global">
+                    <div className="flex">
+                        <Link href="#" className="inline-block">
                             <span className="sr-only">{process.env.NEXT_PUBLIC_SITE_NAME}</span>
-                            <Image src="/img/logo.png" width={110} height={143} alt="" className="h-auto" />
+                            <Logo width={140} height={120}/>
                         </Link>
                     </div>
 
-                    <div className="flex lg:hidden ml-auto">
+                    <div className="flex lg:hidden ml-auto ">
                         <button
                             type="button"
                             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -38,15 +38,21 @@ const Navbar = () => {
                         </button>
                     </div>
 
-                    <Popover.Group className="hidden lg:flex lg:gap-x-6">
-                        <Link href="#" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
-                            About
+                    <Popover.Group className="hidden lg:flex ">
+                        <Link href="/" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            Home
                         </Link>
-                        <Link href="#" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
-                            Portfolio
+                        <Link href="/works" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            Works
                         </Link>
-                        <Link href="#" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
-                            Contact Me
+                        <Link href="/services" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            Services
+                        </Link>
+                        <Link href="/library" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            GitHub
+                        </Link>
+                        <Link href="/contact" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            Contact
                         </Link>
                     </Popover.Group>
                 </nav>
@@ -80,12 +86,6 @@ const Navbar = () => {
                                     <Link href="#"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                         Company
-                                    </Link>
-                                </div>
-                                <div className="py-6">
-                                    <Link href="/login"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                        Log in
                                     </Link>
                                 </div>
                             </div>

@@ -1,10 +1,45 @@
+import Image from "next/image";
 import React from "react";
 
-export const Logo = (props : any) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1504 1526" {...props} aria-label="CodeCanvas Logo">
-        <g transform="translate(0, 1504) scale(0.1,-0.1)" fill="currentColor" stroke="none">
-            <path d="M7375 14996 c-146 -34 -258 -95 -386 -210 -163 -146 -6795 -6789 -6829 -6839 -191 -286 -169 -660 53 -917 128 -148 6820 -6826 6877 -6862 81 -52 146 -83 230 -110 66 -20 95 -23 235 -23 140 0 169 3 235 23 82 26 171 69 240 115 59 39 855 830 932 926 126 157 188 335 189 546 1 92 -4 139 -20 200 -23 87 -75 196 -123 259 -17 23 -1240 1250 -2717 2729 l-2686 2687 2686 2688 c1477 1478 2700 2705 2717 2728 170 223 192 575 54 851 -23 44 -68 113 -100 154 -76 95 -873 886 -932 926 -66 45 -156 88 -235 113 -89 29 -325 38 -420 16z"/>
-            <path d="M10940 11659 c-105 -21 -142 -49 -418 -323 -145 -144 -277 -282 -294 -309 -97 -151 -95 -369 6 -505 19 -26 703 -715 1520 -1532 l1486 -1485 -1514 -1515 c-1655 -1657 -1542 -1536 -1566 -1682 -13 -87 6 -201 50 -288 27 -55 73 -106 299 -331 231 -232 274 -270 331 -297 130 -62 277 -63 409 0 62 28 178 143 1983 1947 1842 1841 1918 1919 1949 1985 53 114 55 252 3 363 -24 52 -227 258 -1948 1980 -1698 1699 -1928 1925 -1981 1951 -99 49 -205 63 -315 41z"/>
-        </g>
-    </svg>
-);
+interface LogoProps {
+    width: number;
+    height: number;
+}
+
+const BRANCH = process.env.NEXT_PUBLIC_BRANCH;
+
+export const Logo = ({ width, height }: LogoProps) => {
+    if (BRANCH == "development") {
+        return (
+            <Image src="/img/logo_preview.png" 
+                width={width}
+                height={height}
+                alt="Logo.png" 
+                className="h-auto" />)
+    } else {
+        return (
+            <Image src="/img/logo.png" 
+                width={width}
+                height={height}
+                alt="Logo.png" 
+                className="h-auto" />)
+    }
+};
+
+export const LogoWithTag = ({ width, height }: LogoProps) => {
+    if (BRANCH == "development") {
+        return (
+            <Image src="/img/logo_with_tag_preview.png" 
+                width={width}
+                height={height}
+                alt="Logo.png" 
+                className="h-auto" />)
+    } else {
+        return (
+            <Image src="/img/logo_with_tag.png" 
+                width={width}
+                height={height}
+                alt="Logo.png" 
+                className="h-auto" />)
+    }
+};
