@@ -11,7 +11,7 @@ import {
 import Container from "./Container";
 import Link from "next/link";
 import Image from "next/image";
-import { Logo } from "../icons/Logo";
+import { Logo, LogoWithTag } from "../icons/Logo";
 
 const Navbar = () => {
 
@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className="flex">
                         <Link href="#" className="inline-block">
                             <span className="sr-only">{process.env.NEXT_PUBLIC_SITE_NAME}</span>
-                            <Logo width={140} height={120}/>
+                            <LogoWithTag width={140} height={120}/>
                         </Link>
                     </div>
 

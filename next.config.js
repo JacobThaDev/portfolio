@@ -32,7 +32,13 @@ const nextConfig = {
           hostname: 'toka.peerduck.com',
           port: '',
           pathname: '/**',
-        }
+        },
+        {
+          protocol: 'https',
+          hostname: 'jacobtha.dev',
+          port: '',
+          pathname: '/**',
+        },
       ],
     },
   }

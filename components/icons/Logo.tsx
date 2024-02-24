@@ -29,7 +29,7 @@ export const Logo = ({ width, height }: LogoProps) => {
 export const LogoWithTag = ({ width, height }: LogoProps) => {
     if (BRANCH == "development") {
         return (
-            <Image src="/img/logo_with_tag_preview.png" 
+            <Image src="https://jacobtha.dev/img/logo_with_tag_preview.png" 
                 width={width}
                 height={height}
                 alt="Logo.png" 
@@ -37,6 +37,24 @@ export const LogoWithTag = ({ width, height }: LogoProps) => {
     } else {
         return (
             <Image src="/img/logo_with_tag.png" 
+                width={width}
+                height={height}
+                alt="Logo.png" 
+                className="h-auto" />)
+    }
+};
+
+export const EmbedCard = ({ width, height }: LogoProps) => {
+    if (BRANCH == "development") {
+        return (
+            <Image src="https://jacobtha.dev/img/logo_embed_preview.png" 
+                width={width}
+                height={height}
+                alt="Logo.png" 
+                className="h-auto" />)
+    } else {
+        return (
+            <Image src="/img/logo_embed.png" 
                 width={width}
                 height={height}
                 alt="Logo.png" 
