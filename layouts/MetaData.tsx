@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import NextHead from "next/head";
+import { GetEmbedCard } from "../components/icons/Logo";
 
 interface MetaProps {
     title?:string;
@@ -21,7 +22,7 @@ export const MetaData = ({ title, description, }: MetaProps) => {
             <meta property="og:image:type" content="image/png"/>
             <meta property="og:image:width" content="1280"/>
             <meta property="og:image:height" content="640"/>
-            <meta property="og:image" content="https://jacobtha.dev/img/logo_embed.png" />
+            <meta property="og:image" content={GetEmbedCard()} />
             <meta name="twitter:description" content={description ? description : default_desc}/>
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:site" content="@JacobThaDev"/>

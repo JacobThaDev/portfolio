@@ -55,11 +55,3 @@
 .home-header {
     background: white;
 }
-
-@media screen(lg) {
-    .home-header {
-        background: url(../img/header.png) center right no-repeat;
-        background-size: cover;
-        border-bottom: solid 1px #EAEAEA;
-    }
-}

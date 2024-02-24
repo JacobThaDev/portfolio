@@ -27,9 +27,10 @@ export const Logo = ({ width, height }: LogoProps) => {
 };
 
 export const LogoWithTag = ({ width, height }: LogoProps) => {
+    console.log(BRANCH)
     if (BRANCH == "development") {
         return (
-            <Image src="https://jacobtha.dev/img/logo_with_tag_preview.png" 
+            <Image src="/img/logo_with_tag_preview.png" 
                 width={width}
                 height={height}
                 alt="Logo.png" 
@@ -44,20 +45,10 @@ export const LogoWithTag = ({ width, height }: LogoProps) => {
     }
 };
 
-export const EmbedCard = ({ width, height }: LogoProps) => {
+export const GetEmbedCard = () => {
     if (BRANCH == "development") {
-        return (
-            <Image src="https://jacobtha.dev/img/logo_embed_preview.png" 
-                width={width}
-                height={height}
-                alt="Logo.png" 
-                className="h-auto" />)
+        return "https://preview.jacobtha.dev/img/logo_with_tag_preview.png"
     } else {
-        return (
-            <Image src="/img/logo_embed.png" 
-                width={width}
-                height={height}
-                alt="Logo.png" 
-                className="h-auto" />)
+        return "https://jacobtha.dev/img/logo_embed.png";
     }
 };
