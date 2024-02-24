@@ -18,13 +18,13 @@ const Navbar = () => {
     const [ mobileMenuOpen, setMobileMenuOpen ] = useState(false)
 
     return (
-        <header className={`absolute w-full top-0 left-0 z-50 bg-white shadow-md`}>
+        <header className={`sticky top-0 w-full z-50 bg-white shadow-md mb-20`}>
             <Container>
                 <nav className="mx-auto flex items-center py-6 gap-10" aria-label="Global">
                     <div className="flex">
                         <Link href="#" className="inline-block">
                             <span className="sr-only">{process.env.NEXT_PUBLIC_SITE_NAME}</span>
-                            <LogoWithTag width={140} height={120}/>
+                            <Logo width={140} height={79}/>
                         </Link>
                     </div>
 
