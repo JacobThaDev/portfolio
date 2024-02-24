@@ -14,7 +14,7 @@ export default function GlobalLayout({ children, title, desc, showNav = true, sh
 
 	return (
 		<>
-			<MetaData title={title} desc={desc}/>
+			<MetaData title={title} description={desc}/>
 			{showNav && <Navbar/>}
 			{children}
 		</>
