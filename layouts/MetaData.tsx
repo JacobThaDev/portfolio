@@ -10,7 +10,7 @@ export const MetaData = ({ title, desc, }: MetaProps) => {
 
 	return (
 		<NextHead>
-			<title>{`${title ? title+" | Credo Construction" : "Credo Construction"}`}</title>
+			<title>{`${title ? title+" | "+process.env.NEXT_PUBLIC_SITE_NAME : process.env.NEXT_PUBLIC_SITE_NAME}`}</title>
 			<meta name="description" content={`${desc ? desc : "Top general contractor in Whatcom and Skagit Counties in Washington, we offer a variety of building services tailored to meet your needs."}`} />
 			<meta name="viewport" key="viewport" content="width=device-width, initial-scale=0.87, shrink-to-fit=no" />
 			<link href="/favicon.svg" rel="icon" />

@@ -7,6 +7,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { GithubIcon } from '../components/icons/GithubIcon';
 import { GoogleIcon } from '../components/icons/GoogleIcon';
 import { DiscordIcon } from '../components/icons/DiscordIcon';
+import Image from 'next/image';
 
 function Login() {
     
@@ -21,46 +22,20 @@ function Login() {
                 </div>
             
                 <div className="flex min-h-[100vh] items-center justify-center">
-
-                {session && 
-                    <div className="w-[100%] max-w-[450px] p-3 border-1 rounded-2xl shadow-xl bg-white">
-                        <div className="flex login-header items-center justify-center flex-col py-5 gap-1">
-                            <Logo width={50} className="text-primary mb-5"/>
-                            <h3 className="text-xl font-semibold">Welcome to Foxtrot Labs</h3>
-                            <p>Thanks for joining!</p>
-                        </div>
-
-                        <div className="flex flex-col items-center justify-center mb-10">
-                            {session.user && 
-                                <img src={""+session.user.image} 
-                                    className="rounded-full border-[10px] w-32 h-32 border-gray-100" 
-                                    alt=""/>}
-
-                            <p className="font-[700] text-xl mt-3">{session.user && session.user.name}</p>
-                            <p className="text-gray-600">{session.user && session.user.email}</p>
-                        </div>
-
-                        <div className="px-8 pb-10">
-                            <a className="w-full text-center mb-3 inline-block px-3.5 py-2.5 rounded-lg bg-[#EFEFEF] hover:bg-primary hover:text-white transition-colors" 
-                                href={"/"}>
-                                Continue
-                            </a>
-
-                            <button className="w-full text-center py-3 bg-slate-600 hover:bg-slate-600/90 transition-colors rounded-lg text-white" 
-                                onClick={() => signOut()}>
-                                    Cancel
-                            </button>
-                        </div>
-                    </div>}
-
                     {!session && 
                     <div className="w-[100%] max-w-[450px] border-1 rounded-2xl shadow-xl bg-white">
                         <div className="flex login-header items-center justify-center flex-col py-5 pt-10 gap-1">
-                            <Logo width={50} className="text-primary mb-5"/>
+                            
+                            <Image src="/img/logo.png" 
+                                width={64} 
+                                height={64} 
+                                alt="" 
+                                className="text-primary mb-5" />
+
                             <h3 className="text-xl font-semibold">
-                                Log in to Foxtrot Labs
+                                Sign in to get started
                             </h3>
-                            <p>Start building your website today.</p>
+                            <p>No need to register.</p>
                         </div>
 
                         <div className="inline-block h-[1px] w-full bg-gray-200"/>

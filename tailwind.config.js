@@ -9,13 +9,13 @@ module.exports = {
   ],
   theme: {
     colors: {
-      ...colors,
-      background: "#f5f5f5",
+      background: "#F8F8F8",
       primary: "#D5412E",
+      alt: "#211131",
       white: "#FFFFFF",
       black: "#000000",
       danger: "#d2433f",
-      secondary: "#9750DD",
+      secondary: "#ECEFF2",
       warning: "#f0ad4e",
       success: "#62af66",
     },
@@ -23,7 +23,11 @@ module.exports = {
       center: true,
       padding: "2em"
     },
-    extend: {},
+    extend: {
+        colors: {
+            
+        }
+    },
   },
   darkMode: "class",
   plugins: [],
