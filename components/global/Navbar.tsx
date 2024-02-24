@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className="flex">
                         <Link href="#" className="inline-block">
                             <span className="sr-only">{process.env.NEXT_PUBLIC_SITE_NAME}</span>
-                            <Logo width={140} height={79}/>
+                            <LogoWithTag width={140} height={79}/>
                         </Link>
                     </div>
 

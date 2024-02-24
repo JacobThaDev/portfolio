@@ -47,7 +47,7 @@ export const LogoWithTag = ({ width, height }: LogoProps) => {
 
 export const GetEmbedCard = () => {
     if (BRANCH == "development") {
-        return "https://preview.jacobtha.dev/img/logo_with_tag_preview.png"
+        return "https://preview.jacobtha.dev/img/logo_embed_preview.png"
     } else {
         return "https://jacobtha.dev/img/logo_embed.png";
     }
