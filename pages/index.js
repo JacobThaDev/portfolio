@@ -19,7 +19,7 @@ function Homepage() {
 
                             <Image src="/img/avatar.jpg" 
                                 width={150}
-                                height={300} 
+                                height={150} 
                                 className="rounded-full relative z-10 mx-auto h-auto mb-10"
                                 alt=""/>
 
