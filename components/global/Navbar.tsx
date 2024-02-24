@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <header className={`sticky top-0 w-full z-50 bg-white shadow-md mb-20`}>
             <Container>
-                <nav className="mx-auto flex items-center py-6 gap-10" aria-label="Global">
+                <nav className="mx-auto flex items-center py-2 gap-10" aria-label="Global">
                     <div className="flex">
                         <Link href="#" className="inline-block">
                             <span className="sr-only">{process.env.NEXT_PUBLIC_SITE_NAME}</span>
@@ -28,7 +28,7 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    <div className="flex lg:hidden ml-auto ">
+                    <div className="flex lg:hidden ml-auto">
                         <button
                             type="button"
                             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"

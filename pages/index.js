@@ -15,7 +15,7 @@ function Homepage() {
             <div className="flex items-center">
                 <Container>
                     <div className="flex gap-10">
-                        <div className="min-w-[300px] bg-white rounded-3xl shadow-md p-5">
+                        <div className="min-w-[300px] bg-white rounded-3xl shadow-md p-5 pt-8">
 
                             <Image src="/img/avatar.jpg" 
                                 width={150}
