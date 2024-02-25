@@ -117,7 +117,6 @@ function Homepage() {
                                             className="rounded-lg"/>
 
                                         <div className="pt-5 pb-3">
-
                                             <div className="flex flex-col-reverse xl:flex-row xl:items-center gap-3 xl:justify-between">
                                                 <div className="w-full">
                                                     <p className="text-sm">Crypto</p>
@@ -136,8 +135,8 @@ function Homepage() {
                                     </Link>
                                 </div>
 
-                                <Link href="https://safemoon.com" target="_blank" rel="nofollow" className="bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 lg:hover:translate-y-[-0.7em] transition-all duration-700">
-                                    <div className="group-hover:opacity-30 hover:!opacity-[1] transition-opacity duration-700">
+                                <div className="group-hover:opacity-30 hover:!opacity-[1] transition-opacity duration-700">
+                                    <Link href="https://safemoon.com" target="_blank" rel="nofollow" className="inline-block bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 lg:hover:translate-y-[-0.7em] transition-all duration-700">
                                         <Image src="/img/safemoon.png" 
                                             width={400} 
                                             height={200} 
@@ -160,8 +159,8 @@ function Homepage() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </Link>
+                                    </Link>
+                                </div>
                             </div>
 
                             <hr className="border-secondary mb-6"/>
