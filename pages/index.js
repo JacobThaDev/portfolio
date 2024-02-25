@@ -14,7 +14,7 @@ function Homepage() {
             
             <div className="flex items-center">
                 <Container>
-                    <div className="flex lg:flex-row flex-col gap-10 items-start">
+                    <div className="flex lg:flex-row flex-col gap-10 lg:items-start">
                         <div className="min-w-[400px] bg-white rounded-3xl shadow-md p-5 pt-8">
 
                             <Image src="/img/avatar.jpg" 
@@ -106,7 +106,7 @@ function Homepage() {
                                 My Projects
                             </p>
 
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-10 group">
+                            <div className="grid grid-cols-1 md:grid-cols-2  gap-3 mb-10 group">
                                 <div className="group-hover:opacity-30 hover:!opacity-[1] transition-opacity duration-700">
                                     <div className="bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 lg:hover:translate-y-[-0.7em] transition-all duration-700 relative">
                                         <Image src="/img/dione2.png" 
