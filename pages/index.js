@@ -107,8 +107,9 @@ function Homepage() {
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2  gap-3 mb-10 group">
+
                                 <div className="group-hover:opacity-30 hover:!opacity-[1] transition-opacity duration-700">
-                                    <div className="bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 lg:hover:translate-y-[-0.7em] transition-all duration-700 relative">
+                                    <Link href="https://dioneprotocol.com" target="_blank" rel="nofollow" className="inline-block bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 lg:hover:translate-y-[-0.7em] transition-all duration-700 relative">
                                         <Image src="/img/dione2.png" 
                                             width={400} 
                                             height={200} 
@@ -132,10 +133,10 @@ function Homepage() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
 
-                                <div className="bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 lg:hover:translate-y-[-0.7em] transition-all duration-700">
+                                <Link href="https://safemoon.com" target="_blank" rel="nofollow" className="bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 lg:hover:translate-y-[-0.7em] transition-all duration-700">
                                     <div className="group-hover:opacity-30 hover:!opacity-[1] transition-opacity duration-700">
                                         <Image src="/img/safemoon.png" 
                                             width={400} 
@@ -160,7 +161,7 @@ function Homepage() {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             </div>
 
                             <hr className="border-secondary mb-6"/>
@@ -168,7 +169,7 @@ function Homepage() {
                             <p className="text-2xl font-bold mb-5">
                                 Services
                             </p>
-
+                            <p>tbc...</p>
 
 
 
