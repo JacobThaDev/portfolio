@@ -14,8 +14,8 @@ function Homepage() {
             
             <div className="flex items-center">
                 <Container>
-                    <div className="flex gap-10">
-                        <div className="min-w-[300px] bg-white rounded-3xl shadow-md p-5 pt-8">
+                    <div className="flex lg:flex-row flex-col gap-10">
+                        <div className="min-w-[400px] bg-white rounded-3xl shadow-md p-5 pt-8">
 
                             <Image src="/img/avatar.jpg" 
                                 width={150}
@@ -24,7 +24,7 @@ function Homepage() {
                                 alt=""/>
 
                             <div className="mb-10 text-center">
-                                <p className="text-2xl font-bold mb-3">Jacob Smith</p>
+                                <p className="text-3xl font-bold mb-3">Jacob Smith</p>
                                 <div className="px-4 py-2 bg-secondary inline-block rounded-xl text-xs font-bold">
                                     <p>Web Developer</p>
                                 </div>
@@ -32,14 +32,20 @@ function Homepage() {
 
                             <div className="flex gap-4 items-center justify-center mb-10">
                                 <Link href=""
+                                    target="_blank"
+                                    rel="nofollow"
                                     className="inline-block bg-secondary p-2 rounded-xl">
                                     <TwitterIcon width={24} height={24} />
                                 </Link>
                                 <Link href=""
+                                    target="_blank"
+                                    rel="nofollow"
                                     className="inline-block bg-secondary p-2 rounded-xl">
                                     <DiscordIcon width={24} height={24}/>
                                 </Link>
                                 <Link href=""
+                                    target="_blank"
+                                    rel="nofollow"
                                     className="inline-block bg-secondary p-2 rounded-xl">
                                     <LinkedinIcon width={24} height={24} />
                                 </Link>
@@ -52,7 +58,7 @@ function Homepage() {
                                             <MapPinIcon height={20}/>
                                         </div>
                                         <div className="inline-block bg-secondary p-3 rounded-xl w-full">
-                                            <p>Texarkana, Arkansas</p>
+                                            <p>Texarkana, Texas</p>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +76,7 @@ function Homepage() {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="flex items-center ">
+                                    <div className="flex items-center">
                                         <div className="min-w-[34px]">
                                             <CakeIcon height={20}/>
                                         </div>
@@ -80,6 +86,21 @@ function Homepage() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="w-full">
+
+                            <p>My Profession</p>
+                            <p className="text-2xl font-bold mb-5">
+                                Full-Stack Website Developer
+                            </p>
+                            <p className="text-lg">
+                                I'm <strong>Jacob Smith</strong>, a well respected and independent website developer and avid gamer from Texarkana, Texas. 
+                                I hand craft every website to be sleek and professional using NextJS, NodeJS, and TailwindCSS. I focus on clean and maintainable
+                                code and like to experiment in my free time. I also like to squash edge-cases for fun.
+                            </p>
+
+
                         </div>
                     </div>
                 </Container>

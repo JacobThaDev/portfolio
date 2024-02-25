@@ -18,9 +18,9 @@ const Navbar = () => {
     const [ mobileMenuOpen, setMobileMenuOpen ] = useState(false)
 
     return (
-        <header className={`sticky top-0 w-full z-50 bg-white shadow-md mb-20`}>
+        <header className={`sticky top-0 w-full z-50 mb-20 pt-10`}>
             <Container>
-                <nav className="mx-auto flex items-center py-2 gap-10" aria-label="Global">
+                <nav className="flex mx-auto items-center py-2 gap-10" aria-label="Global">
                     <div className="flex">
                         <Link href="#" className="inline-block">
                             <span className="sr-only">{process.env.NEXT_PUBLIC_SITE_NAME}</span>
