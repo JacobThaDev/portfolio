@@ -12,19 +12,19 @@ const Experience = () => {
             website: "https://dioneprotocol.com"
         },
         {
+            name: "GlowToken",
+            icon: null,
+            duration: "2022",
+            position: "Head of Website Development",
+            website: "https://glowtoken.net"
+        },
+        {
             name: "SafeMoon",
             icon: null,
             duration: "2021",
             position: "Head of Website Development",
             website: "https://safemoon.com"
         },
-        {
-            name: "GlowToken",
-            icon: null,
-            duration: "2022",
-            position: "Head of Website Development",
-            website: "https://glowtoken.net"
-        }
     ];
 
     return(
