@@ -2,12 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { TwitterIcon } from '../icons/TwitterIcon';
-import { DiscordIcon } from '../icons/DiscordIcon';
-import { ReadcvIcon } from '../icons/ReadcvIcon';
-import { CakeIcon, EnvelopeOpenIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import axios from "axios";
-import { Game } from "../../pages/api/games";
 
 const Games = () => {
 
@@ -33,7 +28,8 @@ const Games = () => {
             </p>
             <p className="mb-5">in the Last 2 weeks</p>
 
-            <div className="grid">
+            <div className="grid group">
+
             {games?.map((game:any, index:number) => {
                 return(
                     <Link 
@@ -41,7 +37,7 @@ const Games = () => {
                         target="_blank"
                         rel="nofollow"
                         key={index}>
-                        <div className="bg-white rounded-2xl shadow-md p-5 mb-3">
+                        <div className="bg-white rounded-2xl shadow-md p-5 mb-3 md:group-hover:opacity-30 md:hover:!opacity-[1] md:transition-all md:lg:hover:translate-x-[0.7em] md:duration-500">
                             <div className="flex gap-3">
                                 <div className="max-w-[120px]">
                                     <Image 
