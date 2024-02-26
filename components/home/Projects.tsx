@@ -47,7 +47,7 @@ const Projects = () => {
 
                 {projects.map((project:Project, index) => {
                     return(
-                        <div className="">
+                        <div key={index}>
                             <Link href={project.website} target="_blank" rel="nofollow" 
                                     className="inline-block bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 relative group-hover:opacity-30 hover:!opacity-[1] lg:hover:translate-y-[-0.7em] transition-all duration-700">
                                 
@@ -66,7 +66,7 @@ const Projects = () => {
                                         <div className="flex gap-2">
                                             {project.tags.map((tag, index) => {
                                                 return(
-                                                    <div key={index} className="bg-secondary text-xs font-semibold px-3 py-2 rounded-full inline-flex">
+                                                    <div key={"tag-"+index} className="bg-secondary text-xs font-semibold px-3 py-2 rounded-full inline-flex">
                                                         {tag}
                                                     </div>
                                                 )
