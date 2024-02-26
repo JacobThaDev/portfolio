@@ -8,25 +8,22 @@ const Experience = () => {
             name: "Dione Protocol",
             icon: null,
             duration: "2023-current",
-            position: "Head of Website Development"
+            position: "Head of Website Development",
+            website: "https://dioneprotocol.com"
         },
         {
             name: "SafeMoon",
             icon: null,
             duration: "2021",
-            position: "Head of Website Development"
+            position: "Head of Website Development",
+            website: "https://safemoon.com"
         },
         {
             name: "GlowToken",
             icon: null,
             duration: "2022",
-            position: "Head of Website Development"
-        },
-        {
-            name: "Fyb3r",
-            icon: null,
-            duration: "2022",
-            position: "Quality Assurance"
+            position: "Head of Website Development",
+            website: "https://glowtoken.net"
         }
     ];
 
