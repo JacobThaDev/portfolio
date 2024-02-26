@@ -27,16 +27,18 @@ function Homepage() {
                         </div>
 
                         <div className="w-full">
+                            <div id="profession"></div>
                             <Profession/>
-                            <hr className="border-secondary mb-6"/>
 
+                            <hr className="border-secondary mb-6" id="works"/>
                             <Projects/>
-                            <hr className="border-secondary mb-6"/>
 
+                            <hr className="border-secondary mb-6" id="services"/>
                             <Services/>
-                            <hr className="border-secondary mb-6"/>
 
+                            <hr className="border-secondary mb-6" id="experience"/>
                             <Experience/>
+
                             <p>tbc...</p>
                         </div>
                     </div>

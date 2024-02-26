@@ -40,7 +40,7 @@ const Projects = () => {
     return(
         <>
             <p className="text-2xl font-bold mb-5">
-                My Projects
+                My Works
             </p>
 
             <div className="grid group grid-cols-1 md:grid-cols-2 gap-3 mb-10">
