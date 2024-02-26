@@ -9,7 +9,7 @@ import { CakeIcon, EnvelopeOpenIcon, MapPinIcon } from '@heroicons/react/24/outl
 
 const Profile = () => {
     return(
-        <div className="bg-white rounded-3xl shadow-md p-5 pt-8">
+        <div className="bg-white rounded-2xl shadow-md p-5 pt-8 mb-10">
             <Image src="/img/avatar.jpg" 
                 width={150}
                 height={150} 

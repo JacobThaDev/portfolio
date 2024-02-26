@@ -11,6 +11,7 @@ import Profession from '../components/home/Profession';
 import Projects from '../components/home/Projects';
 import Services from '../components/home/Services';
 import Experience from '../components/home/Experience';
+import Games from '../components/home/Games';
 
 function Homepage() {
 
@@ -22,6 +23,7 @@ function Homepage() {
                     <div className="flex lg:flex-row flex-col gap-10 lg:items-start">
                         <div className="lg:min-w-[400px]">
                             <Profile/>
+                            <Games/>
                         </div>
 
                         <div className="w-full">
