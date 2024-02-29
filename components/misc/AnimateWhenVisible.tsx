@@ -1,54 +1,69 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-interface AnimationProps {
+type AnimationProps = {
     children:any;
     once?:boolean;
     delay?:number;
-    direction?:"vertical"|"horizontal",
+    direction?:"fade-in"|"fade-up"|"fade-down"|"fade-left"|"fade-right",
     duration?:number;
 }
 
 const AnimateWhenVisible = ({ 
     children, 
-    once = true, 
+    once = false, 
     delay = 0, 
-    direction = "vertical",
+    direction = "fade-right",
     duration = 1
 }: AnimationProps) => {
 
     const [ref, inView] = useInView({
         threshold: 0,
         triggerOnce: once,
-        rootMargin: "0px 0px -300px 0px"
+        rootMargin: "0px 0px -150px 0px"
     });
 
     const variants = {
-        horizontal: {
+        "fade-in": {
             visible: {
-                x:0,
                 opacity: 1,
-                scale: 1,
                 transition: { 
-                    type: "fade-in-cubic",
+                    type: "fade-in",
                     delay: delay,
                     duration: duration
                 }
             },
             hidden: { 
-                x:-50,
                 opacity: 0,
                 transition: { 
-                    type: "fade-out-cubic",
+                    type: "fade-out",
                     duration: (duration - (duration * 0.25)) // 25% faster out than in
                 }
             }
         },
-        vertical: {
+        "fade-up": {
             visible: {
                 y:0,
                 opacity: 1,
-                scale: 1,
+                transition: { 
+                    type: "fade-in",
+                    delay: delay,
+                    duration: duration
+                }
+            },
+            hidden: { 
+                y:50,
+                opacity: 0,
+                transition: { 
+                    type: "fade-out",
+                    duration: (duration - (duration * 0.25)) // 25% faster out than in
+                }
+            }
+        },
+        "fade-down": {
+            visible: {
+                y:0,
+                opacity: 1,
                 transition: { 
                     type: "fade-in",
                     delay: delay,
@@ -59,19 +74,56 @@ const AnimateWhenVisible = ({
                 y:-50,
                 opacity: 0,
                 transition: { 
-                    type: "fade-out-cubic",
+                    type: "fade-out",
+                    duration: (duration - (duration * 0.25)) // 25% faster out than in
+                }
+            }
+        },
+        "fade-left": {
+            visible: {
+                x:0,
+                opacity: 1,
+                transition: { 
+                    type: "fade-in",
+                    delay: delay,
+                    duration: duration
+                }
+            },
+            hidden: { 
+                x:50,
+                opacity: 0,
+                transition: { 
+                    type: "fade-out",
+                    duration: (duration - (duration * 0.25)) // 25% faster out than in
+                }
+            }
+        },
+        "fade-right": {
+            visible: {
+                x:0,
+                opacity: 1,
+                transition: { 
+                    type: "fade-in",
+                    delay: delay,
+                    duration: duration
+                }
+            },
+            hidden: { 
+                x:-50,
+                opacity: 0,
+                transition: { 
+                    type: "fade-out",
                     duration: (duration - (duration * 0.25)) // 25% faster out than in
                 }
             }
         }
-        
     };
-
+    
     return (
         <motion.div ref={ref}
                 animate={inView ? "visible" : "hidden"}
                 initial="hidden"
-                variants={direction == "horizontal" ? variants.horizontal : variants.vertical}
+                variants={variants[direction]}
                 exit="hidden"
                 viewport={{ once: true, amount: 0.8 }}
                 transition={{ duration: 1, damping: 20, stiffness: 100 }}>

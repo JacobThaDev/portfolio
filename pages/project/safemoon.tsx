@@ -14,9 +14,10 @@ export default function Safemoon() {
 
                 <p className="mb-5 font-bold">
                     referenced version:{" "}
-                    <Link href="https://web.archive.org/web/20220324010539/https://safemoon.com" className="inline-block"
+                    <Link href="https://web.archive.org/web/20220324010539/https://safemoon.com" 
+                        className="inline-block text-primary font-bold"
                         target="_blank" rel="nofollow">
-                        https://web.archive.org/web/20220324010539/https://safemoon.com
+                        web.archive.org
                     </Link>
                 </p>
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
+import AnimateWhenVisible from "../misc/AnimateWhenVisible";
 
 const Games = () => {
 
@@ -31,29 +32,30 @@ const Games = () => {
 
             {games?.map((game:any, index:number) => {
                 return(
-                    <Link 
-                        href={"https://store.steampowered.com/app/"+game.appid} 
-                        target="_blank"
-                        rel="nofollow"
-                        key={index}>
-                        <div className="bg-white rounded-2xl shadow-md p-5 mb-3 md:group-hover:opacity-30 md:hover:!opacity-[1] md:transition-all md:lg:hover:translate-x-[0.7em] md:duration-[400ms]">
-                            <div className="flex gap-3">
-                                <div className="max-w-[120px]">
-                                    <Image 
-                                        src={game.game.image_url} 
-                                        className="w-full rounded-xl"
-                                        width={460} 
-                                        height={215} 
-                                        alt={game.name}/>
+                    <AnimateWhenVisible key={index}>
+                        <Link 
+                            href={"https://store.steampowered.com/app/"+game.appid} 
+                            target="_blank"
+                            rel="nofollow">
+                            <div className="bg-white rounded-2xl shadow-md p-5 mb-3 md:group-hover:opacity-30 md:hover:!opacity-[1] md:transition-all md:lg:hover:translate-x-[0.7em] md:duration-[400ms]">
+                                <div className="flex gap-3">
+                                    <div className="max-w-[120px]">
+                                        <Image 
+                                            src={game.game.image_url} 
+                                            className="w-full rounded-xl"
+                                            width={460} 
+                                            height={215} 
+                                            alt={game.name}/>
+                                    </div>
+                                    <div>
+                                        <p className="font-bold">{game.name}</p>
+                                        <p>{Math.floor(game.playtime_2weeks / 60)} Hrs {(game.playtime_2weeks % 60)} mins</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className="font-bold">{game.name}</p>
-                                    <p>{Math.floor(game.playtime_2weeks / 60)} Hrs {(game.playtime_2weeks % 60)} mins</p>
-                                </div>
+                                
                             </div>
-                            
-                        </div>
-                    </Link>
+                        </Link>
+                    </AnimateWhenVisible>
                 )
             })}
             </div>
