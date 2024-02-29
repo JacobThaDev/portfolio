@@ -44,7 +44,7 @@ export default function Safemoon() {
 
                 <p className="mb-3 text-lg">
                     The first design I made was written with PHP. It was my language of choice at the time and I had written a
-                    new framework prior that I wanted to use. I already knew it was fast enough to handle it, just needed 
+                    new framework prior that I wanted to use. I already knew it was fast enough to handle it, I just needed 
                     that validation so I took the gamble. It had worked perfectly but there&apos;s one oversight I didn&apos;t 
                     catch in the rush.
                 </p>
@@ -61,6 +61,8 @@ export default function Safemoon() {
                     This is when I begin to go down the rabbit hole of how to optimize and scale php and ended up just learning 
                     React and NextJS in favor of it&apos;s scalability right out of the box. After a few weeks of RND, the website was converted to 
                     NextJS and deployed on Vercel while the backend was deployed separately using NodeJS on a Linux machine.
+                    The issue was only occured randomly and was ableto be mitigated by blocking bots via Cloudflare. As a temporary
+                    fix for speed, we ended up removing all stats and API calls from the homepage.
                 </p>
 
                 <p className="mb-3 text-lg">
@@ -79,6 +81,12 @@ export default function Safemoon() {
                     Some artists use the technique on paintings, for example, to lead your eyes from one part of the piece to the 
                     next. This can in some cases allows the artist to invoke deeper meaning into their pieces. The idea here is to
                     keep the viewer focused on the page and lead them along a linear path to prevent distraction.
+                </p>
+
+                <p className="mb-3 text-lg">
+                    Each section is also spaced consistently, with equal space between blocks so nothing out of place catches your 
+                    eye and distracts you. I even compensate for optical illusions, adding or removing padding to make sure it appears
+                    even versus actually being even when measured.
                 </p>
 
                 <p className="mb-5 text-lg">
