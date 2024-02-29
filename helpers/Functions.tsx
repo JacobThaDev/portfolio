@@ -16,3 +16,7 @@ export const capitalize = (str?:string) => {
     let end = str.substring(1, str.length);
     return first + end;
 }
+
+export const classNames = (...classes:string[]) => {
+    return classes.filter(Boolean).join(' ')
+}
