@@ -107,7 +107,7 @@ export default function Safemoon() {
                 </p>
 
                 <p className="mb-5  text-lg">
-                    My "rough drafts" are basically already polished, responsive, and QA tested by the time it&apos;s submitted 
+                    My &ldquo;rough drafts&rdquo; are basically already polished, responsive, and QA tested by the time it&apos;s submitted 
                     for review to upper management. This actually eases the burden on both parties, because I don&apos;t have to go back
                     and correct much of anything and the CEO doesn&apos;t have to stress with going over every little detail.
                 </p>
