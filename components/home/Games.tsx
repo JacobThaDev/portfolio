@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
 import axios from "axios";
 
 const Games = () => {
@@ -37,7 +36,7 @@ const Games = () => {
                         target="_blank"
                         rel="nofollow"
                         key={index}>
-                        <div className="bg-white rounded-2xl shadow-md p-5 mb-3 md:group-hover:opacity-30 md:hover:!opacity-[1] md:transition-all md:lg:hover:translate-x-[0.7em] md:duration-500">
+                        <div className="bg-white rounded-2xl shadow-md p-5 mb-3 md:group-hover:opacity-30 md:hover:!opacity-[1] md:transition-all md:lg:hover:translate-x-[0.7em] md:duration-[400ms]">
                             <div className="flex gap-3">
                                 <div className="max-w-[120px]">
                                     <Image 

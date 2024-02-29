@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { TwitterIcon } from '../icons/TwitterIcon';
-import { DiscordIcon } from '../icons/DiscordIcon';
-import { ReadcvIcon } from '../icons/ReadcvIcon';
+import { TwitterIcon } from '@/components/icons/TwitterIcon';
+import { DiscordIcon } from '@/components/icons/DiscordIcon';
+import { ReadcvIcon } from '@/components/icons/ReadcvIcon';
 import { CakeIcon, EnvelopeOpenIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const Profile = () => {
@@ -24,13 +24,13 @@ const Profile = () => {
             </div>
 
             <div className="flex gap-4 items-center justify-center mb-10">
-                <Link href=""
+                <Link href="https://twitter.com/JacobThaDev"
                     target="_blank"
                     rel="nofollow"
                     className="inline-block bg-secondary p-2 rounded-xl">
                     <TwitterIcon width={24} height={24} />
                 </Link>
-                <Link href=""
+                <Link href="https://discord.com/users/150486701695827968"
                     target="_blank"
                     rel="nofollow"
                     className="inline-block bg-secondary p-2 rounded-xl">

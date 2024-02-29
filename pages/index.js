@@ -1,17 +1,11 @@
 import GlobalLayout from '@/layouts/GlobalLayout';
-import Image from 'next/image';
-import Link from 'next/link';
 import Container from '@/components/global/Container';
-import { TwitterIcon } from '@/components/icons/TwitterIcon';
-import { DiscordIcon } from '@/components/icons/DiscordIcon';
-import { CakeIcon, ComputerDesktopIcon, EnvelopeOpenIcon, MapPinIcon } from '@heroicons/react/24/outline';
-import { ReadcvIcon } from '../components/icons/ReadcvIcon';
-import Profile from '../components/home/Profile';
-import Profession from '../components/home/Profession';
-import Projects from '../components/home/Projects';
-import Services from '../components/home/Services';
-import Experience from '../components/home/Experience';
-import Games from '../components/home/Games';
+import Profile from '@/components/home/Profile';
+import Profession from '@/components/home/Profession';
+import Projects from '@/components/home/Projects';
+import Services from '@/components/home/Services';
+import Experience from '@/components/home/Experience';
+import Games from '@/components/home/Games';
 
 function Homepage() {
 

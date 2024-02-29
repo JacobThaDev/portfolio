@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import NextHead from "next/head";
-import { GetEmbedCard } from "../components/icons/Logo";
+import { GetEmbedCard } from "@/components/icons/Logo";
 
 interface MetaProps {
     title?:string;
