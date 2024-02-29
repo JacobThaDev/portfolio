@@ -11,7 +11,7 @@ type AnimationProps = {
 
 const AnimateWhenVisible = ({ 
     children, 
-    once = false, 
+    once = true, 
     delay = 0, 
     direction = "fade-right",
     duration = 1
