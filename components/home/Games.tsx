@@ -25,7 +25,7 @@ const Games = () => {
             <p className="text-2xl font-bold mb-2">
                 My Recent Games
             </p>
-            <p className="mb-5">in the Last 2 weeks</p>
+            <p className="mb-5">Real-time, in the Last 2 weeks</p>
 
             <div className="grid group">
 
