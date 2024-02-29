@@ -48,10 +48,7 @@ const getRecentGames = async (): Promise<any> => {
     );
   
     const data = (await response.json()) as any;
-  
-    return data.response.games.filter(
-      ({ playtime_forever }) => playtime_forever > 1
-    );
+    return data.response.games.filter((game:Data) => game.playtime_forever > 1);
 }
 
 const getOwnedGames = async (): Promise<any> => {
