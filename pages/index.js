@@ -2,7 +2,7 @@ import GlobalLayout from '@/layouts/GlobalLayout';
 import Container from '@/components/global/Container';
 import Profile from '@/components/home/Profile';
 import Profession from '@/components/home/Profession';
-import Projects from '@/components/home/Projects';
+import Works from '@/components/home/Works';
 import Services from '@/components/home/Services';
 import Experiences from '@/components/home/Experiences';
 import Games from '@/components/home/Games';
@@ -25,7 +25,7 @@ function Homepage() {
                             <Profession/>
 
                             <hr className="border-secondary mb-6" id="works"/>
-                            <Projects/>
+                            <Works/>
 
                             <hr className="border-secondary mb-6" id="services"/>
                             <Services/>

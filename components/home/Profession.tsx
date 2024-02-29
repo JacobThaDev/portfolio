@@ -3,7 +3,7 @@ import AnimateWhenVisible from "../misc/AnimateWhenVisible";
 
 const Profession = () => {
     return(
-        <AnimateWhenVisible direction="fade-down" duration={2.5} delay={0.3}>
+        <AnimateWhenVisible >
             <p>My Profession</p>
             <p className="text-2xl font-bold mb-5">
                 Website Developer

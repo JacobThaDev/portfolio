@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AnimateWhenVisible from "../misc/AnimateWhenVisible";
 
 type Project = {
     category:string,
@@ -10,7 +11,7 @@ type Project = {
     tags:string[]
 }
 
-const Projects = () => {
+const Works = () => {
 
     const projects = [
         {
@@ -46,7 +47,7 @@ const Projects = () => {
 
                 {projects.map((project:Project, index) => {
                     return(
-                        <div key={index}>
+                        <AnimateWhenVisible key={index}>
                             <Link href={project.website} className="inline-block bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 relative group-hover:opacity-30 hover:!opacity-[1] lg:hover:translate-y-[-0.7em] transition-all duration-[400ms]">
                                 
                                 <Image src={project.image} 
@@ -73,7 +74,7 @@ const Projects = () => {
                                     </div>
                                 </div>
                             </Link>
-                        </div>
+                        </AnimateWhenVisible>
                     )
                 })}
             </div>
@@ -81,4 +82,4 @@ const Projects = () => {
     )
 }
 
-export default Projects;
+export default Works;

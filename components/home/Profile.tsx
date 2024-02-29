@@ -6,9 +6,11 @@ import { TwitterIcon } from '@/components/icons/TwitterIcon';
 import { DiscordIcon } from '@/components/icons/DiscordIcon';
 import { ReadcvIcon } from '@/components/icons/ReadcvIcon';
 import { CakeIcon, EnvelopeOpenIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import AnimateWhenVisible from "../misc/AnimateWhenVisible";
 
 const Profile = () => {
     return(
+        <AnimateWhenVisible>
         <div className="bg-white rounded-2xl shadow-md p-5 pt-8 mb-10">
             <Image src="/img/avatar.jpg" 
                 width={150}
@@ -80,7 +82,9 @@ const Profile = () => {
                 </div>
             </div>
         </div>
+        </AnimateWhenVisible>
     )
+
 }
 
 export default Profile;
