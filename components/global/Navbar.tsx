@@ -22,7 +22,7 @@ const Navbar = () => {
             <Container>
                 <nav className="flex mx-auto items-center py-2 gap-10" aria-label="Global">
                     <div className="flex">
-                        <Link href="#" className="inline-block">
+                        <Link href="/" className="inline-block">
                             <span className="sr-only">{process.env.NEXT_PUBLIC_SITE_NAME}</span>
                             <LogoWithTag width={140} height={79}/>
                         </Link>

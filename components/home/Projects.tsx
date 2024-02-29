@@ -16,21 +16,21 @@ const Projects = () => {
         {
             category: "crypto",
             name: "Dione Protocol",
-            website: "https://dioneprotocol.com",
+            website: "/project/dione",
             image: "/img/dione2.png",
             tags: ["Website", "UI/UX"]
         },
         {
             category: "crypto",
             name: "SafeMoon",
-            website: "https://safemoon.com",
+            website: "/project/safemoon",
             image: "/img/safemoon.png",
             tags: ["Website", "UI/UX"]
         },
         {
             category: "crypto",
             name: "GlowToken",
-            website: "https://glowtoken.net",
+            website: "/project/glowtoken",
             image: "/img/glowtoken.png",
             tags: ["Website", "UI/UX"]
         }
@@ -47,8 +47,7 @@ const Projects = () => {
                 {projects.map((project:Project, index) => {
                     return(
                         <div key={index}>
-                            <Link href={project.website} target="_blank" rel="nofollow" 
-                                    className="inline-block bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 relative group-hover:opacity-30 hover:!opacity-[1] lg:hover:translate-y-[-0.7em] transition-all duration-[400ms]">
+                            <Link href={project.website} className="inline-block bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 relative group-hover:opacity-30 hover:!opacity-[1] lg:hover:translate-y-[-0.7em] transition-all duration-[400ms]">
                                 
                                 <Image src={project.image} 
                                     width={400}

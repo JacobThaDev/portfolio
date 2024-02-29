@@ -5,9 +5,11 @@ import Link from "next/link";
 
 export default function Safemoon() {
     return(
-        <GlobalLayout title="Home">
+        <GlobalLayout 
+            title="SafeMoon" 
+            desc="Behind the scenes of my creative process in building the safemoon website.">
             <Container className="mb-32">
-                <p className="text-4xl font-bold mb-3">Safemoon | My Dev Experience</p>
+                <p className="text-4xl font-bold mb-3">Safemoon | Case Study</p>
                 <p className="mb-5">Published Feb. 29, 2024 by Jacob Smith</p>
 
                 <p className="mb-5 font-bold">
@@ -17,6 +19,22 @@ export default function Safemoon() {
                         https://web.archive.org/web/20220324010539/https://safemoon.com
                     </Link>
                 </p>
+
+                <p className="mb-4">
+                    Website:{" "}
+                    <Link href="https://safemoon.com" target="_blank" rel="nofollow"
+                        className="inline-block text-primary font-bold">
+                        https://safemoon.com
+                    </Link>
+                </p>
+
+                <p className="font-bold mb-3 text-lg">
+                    Disclaimer: This case study outlines my creative process for creating the SafeMoon website. 
+                    The design process was basic and rushed with limited time in an attempt to keep the project alive. 
+                    Despite that I&apos;m being transparent.
+                </p>
+
+                <hr className="border-secondary my-5"/>
 
                 <p className="mb-3 text-lg">
                     Immediately, coming into SafeMoon was stressful. I was given plenty of information but the pressure was high 
@@ -41,8 +59,8 @@ export default function Safemoon() {
 
                 <p className="text-lg mb-3">
                     This is when I begin to go down the rabbit hole of how to optimize and scale php and ended up just learning 
-                    React and NextJS in favor of it&apos;s scalability. After a few weeks of RND, the website was converted to 
-                    NextJS and deployed on vercel while the backend was deployed separately using NodeJS on a Linux machine.
+                    React and NextJS in favor of it&apos;s scalability right out of the box. After a few weeks of RND, the website was converted to 
+                    NextJS and deployed on Vercel while the backend was deployed separately using NodeJS on a Linux machine.
                 </p>
 
                 <p className="mb-3 text-lg">
@@ -88,14 +106,16 @@ export default function Safemoon() {
                     take more care in minor details to assure the viewing experience is pleasing.
                 </p>
 
-                <p className="mb-5">
+                <p className="mb-5  text-lg">
                     My "rough drafts" are basically already polished, responsive, and QA tested by the time it&apos;s submitted 
                     for review to upper management. This actually eases the burden on both parties, because I don&apos;t have to go back
-                    and correct much of anything and the CEO doesn&apos;t have to stress with going over every little detail. 
-                    ends.
+                    and correct much of anything and the CEO doesn&apos;t have to stress with going over every little detail.
                 </p>
 
-                <p>Of course my works aren&apos;t perfect, or anything god tier, but I&apos;m dedicated, and with practice comes perfection.</p>
+                <p className="text-lg">
+                    Of course my works aren&apos;t perfect, or anything &ldquo;god tier&rdquo;, but I&apos;m dedicated, and with practice
+                    comes perfection.
+                </p>
             </Container>
         </GlobalLayout>
     )

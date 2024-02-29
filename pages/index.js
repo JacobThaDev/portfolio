@@ -4,7 +4,7 @@ import Profile from '@/components/home/Profile';
 import Profession from '@/components/home/Profession';
 import Projects from '@/components/home/Projects';
 import Services from '@/components/home/Services';
-import Experience from '@/components/home/Experience';
+import Experiences from '@/components/home/Experiences';
 import Games from '@/components/home/Games';
 
 function Homepage() {
@@ -31,7 +31,7 @@ function Homepage() {
                             <Services/>
 
                             <hr className="border-secondary mb-6" id="experience"/>
-                            <Experience/>
+                            <Experiences/>
 
                             <p>tbc...</p>
                         </div>
