@@ -55,3 +55,11 @@
 .home-header {
     background: white;
 }
+
+.text-shadow {
+    text-shadow: 1px 1px 0px #000;
+}
+
+.inset-shadow {
+    background-image: linear-gradient(transparent, black);
+}

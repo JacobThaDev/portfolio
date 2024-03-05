@@ -27,7 +27,6 @@ export const Logo = ({ width, height }: LogoProps) => {
 };
 
 export const LogoWithTag = ({ width, height }: LogoProps) => {
-    console.log(BRANCH)
     if (BRANCH == "development") {
         return (
             <Image src="/img/logo_with_tag_preview.png" 

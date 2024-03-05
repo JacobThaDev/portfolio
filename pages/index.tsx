@@ -7,7 +7,7 @@ import Services from '@/components/home/Services';
 import Experiences from '@/components/home/Experiences';
 import Games from '@/components/home/Games';
 
-function Homepage() {
+export default function Homepage() {
 
     return (
         <GlobalLayout title="Home">
@@ -43,5 +43,3 @@ function Homepage() {
     );
 
 }
-
-export default Homepage;
