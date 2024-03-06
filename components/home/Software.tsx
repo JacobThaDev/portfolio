@@ -1,21 +1,11 @@
 import React from "react";
-
-import GlobalLayout from '@/layouts/GlobalLayout';
-import Container from '@/components/global/Container';
-import { ReactIcon } from '@/components/icons/ReactIcon';
-import { NodeIcon } from '@/components/icons/NodeIcon';
-import { VsIcon } from '@/components/icons/VsIcon';
-import { WindowsIcon } from '@/components/icons/WindowsIcon';
-import { MySQLIcon } from '@/components/icons/MySQLIcon';
-import { UbuntuIcon } from '@/components/icons/UbuntuIcon';
-import { MemoryIcon } from '@/components/icons/MemoryIcon';
-import Image from 'next/image';
-import PcSetup from '@/components/setup/pcsetup';
-import { TailwindIcon } from '@/components/icons/TailwindIcon';
-import { GithubIcon } from '@/components/icons/GithubIcon';
-import { VercelIcon } from '@/components/icons/VercelIcon';
 import Link from 'next/link';
-import { NextIcon } from '@/components/icons/NextIcon';
+
+import { 
+    BattleNetIcon, SteamIcon, TelegramIcon, DiscordIcon, SpotifyIcon,
+    NextIcon, VercelIcon, GithubIcon, TailwindIcon, UbuntuIcon, MySQLIcon, WindowsIcon, 
+    VsIcon, NodeIcon, ReactIcon
+} from "@/components/icons/brands";
 
 const MySoftware = () => {
 
@@ -69,6 +59,31 @@ const MySoftware = () => {
             title: "Vercel",
             icon: <VercelIcon height={30} width={30} />,
             link: "https://vercel.com",
+        },
+        { 
+            title: "Spotify",
+            icon: <SpotifyIcon height={30} width={30} className="text-[#1DB954]" />,
+            link: "https://spotify.com",
+        },
+        {
+            title: "Discord",
+            icon: <DiscordIcon height={30} width={30} className="text-[#5865F2]" />,
+            link: "https://discord.com/users/150486701695827968",
+        },
+        {
+            title: "Telegram",
+            icon: <TelegramIcon height={30} width={30} className="text-[#0088cc]" />,
+            link: "https://t.me/JacobThaDev",
+        },
+        {
+            title: "Steam",
+            icon: <SteamIcon height={30} width={30} />,
+            link: "https://steamcommunity.com/id/JacobThaDev/",
+        },
+        {
+            title: "BattleNet",
+            icon: <BattleNetIcon height={30} width={30} />,
+            link: "https://us.shop.battle.net/en-us",
         }
     ]
 

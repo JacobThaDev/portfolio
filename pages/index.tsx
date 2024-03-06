@@ -12,7 +12,7 @@ export default function Homepage() {
     return (
         <GlobalLayout title="Home">
             
-            <div className="flex items-center">
+            <div className="flex items-center mb-20">
                 <Container>
                     <div className="flex lg:flex-row flex-col gap-10 lg:items-start">
                         <div className="lg:min-w-[400px]">
@@ -32,8 +32,6 @@ export default function Homepage() {
 
                             <hr className="border-secondary mb-6" id="experience"/>
                             <Experiences/>
-
-                            <p>tbc...</p>
                         </div>
                     </div>
                 </Container>

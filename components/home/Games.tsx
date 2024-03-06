@@ -33,7 +33,7 @@ const Games = () => {
             {games?.map((game:any, index:number) => {
                 return(
                     <AnimateWhenVisible key={index}>
-                        <Link 
+                        <Link key={index}
                             href={"https://store.steampowered.com/app/"+game.appid} 
                             target="_blank"
                             rel="nofollow">

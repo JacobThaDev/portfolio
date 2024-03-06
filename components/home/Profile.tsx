@@ -2,15 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { TwitterIcon } from '@/components/icons/TwitterIcon';
-import { DiscordIcon } from '@/components/icons/DiscordIcon';
-import { ReadcvIcon } from '@/components/icons/ReadcvIcon';
+import { 
+    TwitterIcon, DiscordIcon, ReadcvIcon 
+} from '@/components/icons/brands';
 import { CakeIcon, EnvelopeOpenIcon, MapPinIcon } from '@heroicons/react/24/outline';
-import AnimateWhenVisible from "../misc/AnimateWhenVisible";
 
 const Profile = () => {
     return(
-        <AnimateWhenVisible>
         <div className="bg-white rounded-2xl shadow-md p-5 pt-8 mb-10">
             <Image src="/img/avatar.jpg" 
                 width={150}
@@ -19,7 +17,7 @@ const Profile = () => {
                 alt="avatar"/>
 
             <div className="mb-10 text-center">
-                <p className="text-3xl font-bold mb-3">Jacob Smith</p>
+                <p className="text-3xl font-[900] mb-3">Jacob Smith</p>
                 <div className="px-4 py-2 bg-secondary inline-block rounded-xl text-xs font-bold">
                     <p>Web Developer</p>
                 </div>
@@ -82,7 +80,6 @@ const Profile = () => {
                 </div>
             </div>
         </div>
-        </AnimateWhenVisible>
     )
 
 }

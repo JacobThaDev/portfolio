@@ -3,7 +3,7 @@ import AnimateWhenVisible from "../misc/AnimateWhenVisible";
 
 const Profession = () => {
     return(
-        <AnimateWhenVisible >
+        <>
             <p>My Profession</p>
             <p className="text-2xl font-bold mb-5">
                 Website Developer
@@ -15,7 +15,7 @@ const Profession = () => {
                 and TailwindCSS. I focus on clean and maintainable code and like to experiment in my free time. I also 
                 like to squash edge-cases for fun.
             </p>
-        </AnimateWhenVisible>
+        </>
     )
 }
 
