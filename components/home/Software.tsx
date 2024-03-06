@@ -82,7 +82,7 @@ const MySoftware = () => {
         { 
             title: "Github",
             icon: <GithubIcon height={30} width={30} />,
-            link: "https://github.com",
+            link: "https://github.com/JacobThaDev",
             category: "collab"
         },
         { 
