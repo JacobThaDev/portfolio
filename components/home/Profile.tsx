@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { 
-    TwitterIcon, DiscordIcon, ReadcvIcon 
+    TwitterIcon, DiscordIcon, ReadcvIcon, GithubIcon 
 } from '@/components/icons/brands';
 import { CakeIcon, EnvelopeOpenIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
@@ -35,6 +35,12 @@ const Profile = () => {
                     rel="nofollow"
                     className="inline-block bg-secondary p-2 rounded-xl">
                     <DiscordIcon width={24} height={24}/>
+                </Link>
+                <Link href="https://github.com/JacobThaDev"
+                    target="_blank"
+                    rel="nofollow"
+                    className="inline-block bg-secondary p-2 rounded-xl">
+                    <GithubIcon width={24} height={24}/>
                 </Link>
                 <Link href="https://read.cv/jacobthadev"
                     target="_blank"

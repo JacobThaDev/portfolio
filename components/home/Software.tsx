@@ -148,7 +148,28 @@ const MySoftware = () => {
                 Software and apps that I use during my development process.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-4 mb-10 text-center">
+                <div className={classNames(
+                        "p-3",
+                        "px-4",
+                        "rounded-full",
+                        "min-w-[70px]",
+                        "transition-all")}>
+                    Filters
+                </div>
+
+                <button onClick={() => setActive([])}
+                    className={classNames(
+                        "bg-white",
+                        "shadow-md",
+                        "p-3",
+                        "px-4",
+                        "rounded-full",
+                        "min-w-[70px]",
+                        "transition-all")}>
+                    All
+                </button>
+
                 {categories.map((category:string, index:number) => {
 
                     const isActive = active.includes(category);
