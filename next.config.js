@@ -29,10 +29,22 @@ const nextConfig = {
         },
         {
           protocol: 'https',
-          hostname: 'toka.peerduck.com',
+          hostname: 'cdn.akamai.steamstatic.com',
           port: '',
           pathname: '/**',
-        }
+        },
+        {
+          protocol: 'https',
+          hostname: 'jacobtha.dev',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'preview.jacobtha.dev',
+          port: '',
+          pathname: '/**',
+        },
       ],
     },
   }

@@ -10,21 +10,21 @@ import {
 
 import Container from "./Container";
 import Link from "next/link";
-import { useSession } from "next-auth/react"
 import Image from "next/image";
+import { Logo, LogoWithTag } from "../icons/Logo";
 
 const Navbar = () => {
 
     const [ mobileMenuOpen, setMobileMenuOpen ] = useState(false)
 
     return (
-        <header className={`absolute w-full top-0 left-0 z-50 bg-white shadow-md`}>
+        <header className={`w-full z-50 mb-20 pt-10`}>
             <Container>
-                <nav className="mx-auto flex items-center py-6" aria-label="Global">
-                    <div className="flex lg:flex-1 gap-5 items-center">
-                        <Link href="#">
+                <nav className="flex mx-auto items-center py-2 gap-10" aria-label="Global">
+                    <div className="flex">
+                        <Link href="/" className="inline-block">
                             <span className="sr-only">{process.env.NEXT_PUBLIC_SITE_NAME}</span>
-                            <Image src="/img/logo.png" width={110} height={143} alt="" className="h-auto" />
+                            <LogoWithTag width={140} height={79}/>
                         </Link>
                     </div>
 
@@ -38,15 +38,21 @@ const Navbar = () => {
                         </button>
                     </div>
 
-                    <Popover.Group className="hidden lg:flex lg:gap-x-6">
-                        <Link href="#" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
-                            About
+                    <Popover.Group className="hidden lg:flex ">
+                        <Link href="/" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            Home
                         </Link>
-                        <Link href="#" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
-                            Portfolio
+                        <Link href="/#works" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            Works
                         </Link>
-                        <Link href="#" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
-                            Contact Me
+                        <Link href="/#services" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            Services
+                        </Link>
+                        <Link href="/#experience" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            Experience
+                        </Link>
+                        <Link href="/#setup" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            My Setup
                         </Link>
                     </Popover.Group>
                 </nav>
@@ -69,23 +75,20 @@ const Navbar = () => {
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
-                                    <Link href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                        Features
+                                    <Link href="/" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                        Home
                                     </Link>
-                                    <Link href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                        Marketplace
+                                    <Link href="/#works" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                        Works
                                     </Link>
-                                    <Link href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                        Company
+                                    <Link href="/#services" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                        Services
                                     </Link>
-                                </div>
-                                <div className="py-6">
-                                    <Link href="/login"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                        Log in
+                                    <Link href="/#experience" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                        Experience
+                                    </Link>
+                                    <Link href="/#setup" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                        My Setup
                                     </Link>
                                 </div>
                             </div>

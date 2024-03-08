@@ -24,9 +24,7 @@ module.exports = {
       padding: "2em"
     },
     extend: {
-        colors: {
-            
-        }
+        colors: { }
     },
   },
   darkMode: "class",

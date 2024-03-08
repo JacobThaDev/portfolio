@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import NextHead from "next/head";
+import { GetEmbedCard } from "@/components/icons/Logo";
 
 interface MetaProps {
     title?:string;
@@ -8,7 +9,7 @@ interface MetaProps {
 
 export const MetaData = ({ title, description, }: MetaProps) => {
 
-    const default_desc = "An independent website developer just vibin' and havin a good time. I build professional websites using NextJS, NodeJS, and Tailwind.";
+    const default_desc = "An independent website developer just vibin' and havin a good time. I build professional websites using NextJS, NodeJS, and Tailwind. This website also serves as my personal playground :)";
 
 	return (
 		<NextHead>
@@ -21,7 +22,7 @@ export const MetaData = ({ title, description, }: MetaProps) => {
             <meta property="og:image:type" content="image/png"/>
             <meta property="og:image:width" content="1280"/>
             <meta property="og:image:height" content="640"/>
-            <meta property="og:image" content="https://jacobtha.dev/img/embed.png" />
+            <meta property="og:image" content={GetEmbedCard()} />
             <meta name="twitter:description" content={description ? description : default_desc}/>
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:site" content="@JacobThaDev"/>

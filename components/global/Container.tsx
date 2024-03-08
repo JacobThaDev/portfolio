@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ContainerProps {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     props?:any;
     className?:any
 }
@@ -9,7 +9,7 @@ interface ContainerProps {
 const Container = ({ children, className, ...props }: ContainerProps) => {
 
     return(
-        <div {...props} className={`container max-w-[1536px] ${className}`}>
+        <div {...props} className={`container max-w-[1300px] ${className}`}>
             {children}
         </div>
     )
