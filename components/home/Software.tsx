@@ -195,7 +195,7 @@ const MySoftware = () => {
                 })}
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 text-nowrap group">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 text-nowrap group">
                 {software.map((software, index:number) => {
                     
                     const classes:string = classNames(

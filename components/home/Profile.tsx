@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { 
-    TwitterIcon, DiscordIcon, ReadcvIcon, GithubIcon 
+    TwitterIcon, DiscordIcon, ReadcvIcon, GithubIcon, GoogleIcon 
 } from '@/components/icons/brands';
 import { CakeIcon, EnvelopeOpenIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
@@ -23,7 +23,7 @@ const Profile = () => {
                 </div>
             </div>
 
-            <div className="flex gap-4 items-center justify-center mb-10">
+            <div className="flex gap-4 items-center justify-center mb-10 flex-wrap">
                 <Link href="https://twitter.com/JacobThaDev"
                     target="_blank"
                     rel="nofollow"
@@ -41,6 +41,12 @@ const Profile = () => {
                     rel="nofollow"
                     className="inline-block bg-secondary p-2 rounded-xl">
                     <GithubIcon width={24} height={24}/>
+                </Link>
+                <Link href="mailto:og.kingfox@gmail.com"
+                    target="_blank"
+                    rel="nofollow"
+                    className="inline-block bg-secondary p-2 rounded-xl">
+                    <EnvelopeOpenIcon width={24} height={24} />
                 </Link>
                 <Link href="https://read.cv/jacobthadev"
                     target="_blank"

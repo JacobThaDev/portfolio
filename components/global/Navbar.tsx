@@ -51,11 +51,8 @@ const Navbar = () => {
                         <Link href="/#experience" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
                             Experience
                         </Link>
-                        <Link href="/setup" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                        <Link href="/#setup" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
                             My Setup
-                        </Link>
-                        <Link href="/contact" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
-                            Contact
                         </Link>
                     </Popover.Group>
                 </nav>
@@ -90,11 +87,8 @@ const Navbar = () => {
                                     <Link href="/#experience" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                         Experience
                                     </Link>
-                                    <Link href="/setup" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                    <Link href="/#setup" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                         My Setup
-                                    </Link>
-                                    <Link href="/contact" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                        Contact
                                     </Link>
                                 </div>
                             </div>

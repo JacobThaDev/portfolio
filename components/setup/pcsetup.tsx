@@ -31,7 +31,7 @@ const PcSetup = () => {
                     
                     <div className="absolute bottom-5 z-10 text-shadow">
                         <p className="text-sm">Graphics Card</p>
-                        <p className="text-lg font-bold">MSI RTX 3070 Ventus 2X</p>
+                        <p className="text-lg font-bold">MSI RTX 3070 Ventus</p>
                     </div>
                 </div>
                 <div className="bg-white p-5 shadow-md rounded-xl relative overflow-hidden text-white h-[180px] group">

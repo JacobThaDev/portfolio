@@ -6,6 +6,8 @@ import Works from '@/components/home/Works';
 import Services from '@/components/home/Services';
 import Experiences from '@/components/home/Experiences';
 import Games from '@/components/home/Games';
+import PcSetup from '@/components/setup/pcsetup';
+import MySoftware from '@/components/home/Software';
 
 export default function Homepage() {
 
@@ -30,8 +32,11 @@ export default function Homepage() {
                             <hr className="border-secondary mb-6" id="services"/>
                             <Services/>
 
-                            <hr className="border-secondary mb-6" id="experience"/>
-                            <Experiences/>
+                            <hr className="border-secondary mb-6" id="setup"/>
+                            <PcSetup/>
+
+                            <hr className="border-secondary mb-6" id="software"/>
+                            <MySoftware/>
                         </div>
                     </div>
                 </Container>
