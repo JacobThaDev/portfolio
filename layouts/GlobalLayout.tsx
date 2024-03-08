@@ -1,6 +1,7 @@
 import React from "react";
 import { MetaData } from "./MetaData";
 import Navbar from "@/components/global/Navbar";
+import Footer from "@/components/global/Footer";
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -17,6 +18,7 @@ export default function GlobalLayout({ children, title, desc, showNav = true, sh
 			<MetaData title={title} description={desc}/>
 			{showNav && <Navbar/>}
 			{children}
+            <Footer/>
 		</>
 	);
 	
