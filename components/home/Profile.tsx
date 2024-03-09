@@ -14,10 +14,10 @@ const Profile = () => {
                 <Image src="/img/avatar.jpg" 
                     width={150}
                     height={150} 
-                    className="rounded-full relative z-10 mx-auto h-auto border-[2px] border-success p-1 inline-block"
+                    className="rounded-full relative z-10 mx-auto h-auto border-[3px] border-success p-1 inline-block"
                     alt="avatar"/>
 
-                <div className="absolute py-2 bg-success text-white z-10 rounded-full text-xs w-[80px] left-[50%] ml-[-40px] -bottom-2 border-2">
+                <div className="absolute py-2 bg-success text-white z-10 rounded-full text-xs w-[80px] left-[50%] ml-[-40px] -bottom-2 border-4">
                     Available
                 </div>
             </div>
