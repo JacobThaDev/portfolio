@@ -4,17 +4,17 @@ import Profile from '@/components/home/Profile';
 import Profession from '@/components/home/Profession';
 import Works from '@/components/home/Works';
 import Services from '@/components/home/Services';
-import Experiences from '@/components/home/Experiences';
 import Games from '@/components/home/Games';
 import PcSetup from '@/components/setup/pcsetup';
 import MySoftware from '@/components/home/Software';
+
 
 export default function Homepage() {
 
     return (
         <GlobalLayout title="Home">
-            
-            <div className="flex items-center mb-20">
+
+            <div className="flex items-center mb-20 relative z-10">
                 <Container>
                     <div className="flex lg:flex-row flex-col gap-10 lg:items-start">
                         <div className="lg:min-w-[400px]">

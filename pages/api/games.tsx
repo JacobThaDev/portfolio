@@ -33,11 +33,6 @@ export type Game = {
     playtime_disconnected: number
 }
 
-interface EndpointProps {
-    req: NextApiRequest,
-    res: NextApiResponse<Data>
-}
-
 const getRecentGames = async (): Promise<any> => {
     if (!process.env.STEAM_APIKEY) {
       throw new Error('Missing Steam API key');
@@ -54,7 +49,7 @@ const getRecentGames = async (): Promise<any> => {
 const getOwnedGames = async (): Promise<any> => {
     try {
         if (!process.env.STEAM_APIKEY) {
-        throw new Error('Missing Steam API key');
+            throw new Error('Missing Steam API key');
         }
 
         const response = await fetch(
