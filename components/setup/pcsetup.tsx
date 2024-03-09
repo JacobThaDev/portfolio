@@ -12,6 +12,7 @@ const PcSetup = () => {
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
+                
                 <div className="bg-white p-5 shadow-md rounded-xl relative overflow-hidden text-white h-[180px] group">
                     <Image src="/img/misc/cpu.jpg?v=sd2" width={1280} height={960} alt=""
                         className="absolute top-0 left-0 bottom-0 grayscale group-hover:grayscale-0 transition-all duration-500" />
@@ -23,6 +24,7 @@ const PcSetup = () => {
                         <p className="text-lg font-bold">Ryzen 7 5800X</p>
                     </div>
                 </div>
+
                 <div className="bg-white p-5 shadow-md rounded-xl relative overflow-hidden text-white h-[180px] group">
                     <Image src="/img/misc/gpu.jpg?t=1231" width={1280} height={960} alt="" 
                         className="absolute top-0 left-0 bottom-0 grayscale group-hover:grayscale-0 transition-all duration-500" />
@@ -34,6 +36,7 @@ const PcSetup = () => {
                         <p className="text-lg font-bold">MSI RTX 3070 Ventus</p>
                     </div>
                 </div>
+
                 <div className="bg-white p-5 shadow-md rounded-xl relative overflow-hidden text-white h-[180px] group">
                     <Image src="/img/misc/memory.jpg?t=1231" width={1280} height={960} alt=""
                         className="absolute top-0 left-0 bottom-0 grayscale group-hover:grayscale-0 transition-all duration-500 mx-auto" />
@@ -45,6 +48,7 @@ const PcSetup = () => {
                         <p className="text-lg font-bold">32GB DDR4 3200</p>
                     </div>
                 </div>
+                
             </div>
         </>
     )

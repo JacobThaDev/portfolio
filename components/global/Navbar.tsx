@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { Dialog, Popover } from '@headlessui/react'
 
 import {
+    ArrowRightStartOnRectangleIcon,
+    ArrowTopRightOnSquareIcon,
     Bars3Icon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
@@ -48,11 +50,14 @@ const Navbar = () => {
                         <Link href="/#services" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
                             Services
                         </Link>
-                        <Link href="/#experience" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
-                            Experience
-                        </Link>
                         <Link href="/#setup" className="font-semibold leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
                             My Setup
+                        </Link>
+                        <Link href="https://read.cv/jacobthadev" 
+                            target="_blank" 
+                            rel="nofollow" 
+                            className="font-semibold flex gap-1 items-center leading-6 text-gray-900 hover:bg-secondary px-6 py-4 rounded-xl transition-colors">
+                            Experience <ArrowTopRightOnSquareIcon height={22}/>
                         </Link>
                     </Popover.Group>
                 </nav>
@@ -84,11 +89,14 @@ const Navbar = () => {
                                     <Link href="/#services" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                         Services
                                     </Link>
-                                    <Link href="/#experience" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                        Experience
-                                    </Link>
                                     <Link href="/#setup" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                         My Setup
+                                    </Link>
+                                    <Link href="https://read.cv/jacobthadev"
+                                        target="_blank"
+                                        rel="nofollow"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                        Experience
                                     </Link>
                                 </div>
                             </div>
