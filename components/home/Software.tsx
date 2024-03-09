@@ -74,7 +74,7 @@ const MySoftware = () => {
             category: "backend"
         },
         { 
-            title: "Ubuntu *",
+            title: "Ubuntu",
             icon: <UbuntuIcon height={30} width={30} />,
             link: "https://ubuntu.com/",
             category: "os"
