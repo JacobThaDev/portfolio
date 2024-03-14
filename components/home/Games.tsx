@@ -41,6 +41,7 @@ const Games = () => {
                                 <div className="flex gap-3">
                                     <div className="max-w-[120px]">
                                         <Image 
+                                            unoptimized
                                             src={game.game.image_url} 
                                             className="w-full rounded-xl"
                                             width={460} 

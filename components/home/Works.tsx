@@ -51,6 +51,7 @@ const Works = () => {
                             <Link href={project.website} className="inline-block bg-white w-full rounded-2xl shadow-md overflow-hidden p-5 relative group-hover:opacity-30 hover:!opacity-[1] lg:hover:translate-y-[-0.7em] transition-all duration-[400ms]">
                                 
                                 <Image src={project.image} 
+                                    unoptimized
                                     width={400}
                                     height={223}
                                     alt=""
