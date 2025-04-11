@@ -72,7 +72,7 @@ export default function Dione() {
                 <p className="mb-5">
                     The portal was designed and built from the ground up using NextJS, TailwindCSS, TypeScript, 
                     ReOwn AppKit and a few other small packages. I was also fully responsible for the success 
-                    of the portal and it's overall setup.
+                    of the portal and it&apos;s overall setup.
                 </p>
 
                 <div className="flex flex-col lg:flex-row gap-5 items-center">
